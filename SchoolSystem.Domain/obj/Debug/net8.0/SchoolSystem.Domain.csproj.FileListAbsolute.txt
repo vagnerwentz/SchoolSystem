@@ -1,0 +1,12 @@
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Domain/bin/Debug/net8.0/SchoolSystem.Domain.deps.json
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Domain/bin/Debug/net8.0/SchoolSystem.Domain.dll
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Domain/bin/Debug/net8.0/SchoolSystem.Domain.pdb
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Domain/obj/Debug/net8.0/SchoolSystem.Domain.csproj.AssemblyReference.cache
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Domain/obj/Debug/net8.0/SchoolSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Domain/obj/Debug/net8.0/SchoolSystem.Domain.AssemblyInfoInputs.cache
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Domain/obj/Debug/net8.0/SchoolSystem.Domain.AssemblyInfo.cs
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Domain/obj/Debug/net8.0/SchoolSystem.Domain.csproj.CoreCompileInputs.cache
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Domain/obj/Debug/net8.0/SchoolSystem.Domain.dll
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Domain/obj/Debug/net8.0/refint/SchoolSystem.Domain.dll
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Domain/obj/Debug/net8.0/SchoolSystem.Domain.pdb
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Domain/obj/Debug/net8.0/ref/SchoolSystem.Domain.dll

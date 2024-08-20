@@ -1,0 +1,15 @@
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Infrastructure/bin/Debug/net8.0/SchoolSystem.Infrastructure.deps.json
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Infrastructure/bin/Debug/net8.0/SchoolSystem.Infrastructure.dll
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Infrastructure/bin/Debug/net8.0/SchoolSystem.Infrastructure.pdb
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Infrastructure/bin/Debug/net8.0/SchoolSystem.Domain.dll
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Infrastructure/bin/Debug/net8.0/SchoolSystem.Domain.pdb
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Infrastructure/obj/Debug/net8.0/SchoolSystem.Infrastructure.csproj.AssemblyReference.cache
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Infrastructure/obj/Debug/net8.0/SchoolSystem.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Infrastructure/obj/Debug/net8.0/SchoolSystem.Infrastructure.AssemblyInfoInputs.cache
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Infrastructure/obj/Debug/net8.0/SchoolSystem.Infrastructure.AssemblyInfo.cs
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Infrastructure/obj/Debug/net8.0/SchoolSystem.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Infrastructure/obj/Debug/net8.0/SchoolSystem.Infrastructure.csproj.CopyComplete
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Infrastructure/obj/Debug/net8.0/SchoolSystem.Infrastructure.dll
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Infrastructure/obj/Debug/net8.0/refint/SchoolSystem.Infrastructure.dll
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Infrastructure/obj/Debug/net8.0/SchoolSystem.Infrastructure.pdb
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Infrastructure/obj/Debug/net8.0/ref/SchoolSystem.Infrastructure.dll

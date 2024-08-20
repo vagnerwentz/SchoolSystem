@@ -1,0 +1,33 @@
+﻿version: '3.4'
+
+services:
+  schoolsystem.api:
+    image: schoolsystem.api
+    build:
+      context: .
+      dockerfile: SchoolSystem.API/Dockerfile
+    ports:
+      - "8080:8080"
+  mongo:
+    image: mongo:latest
+    container_name: mongodb-container
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb-data:/data/db
+  postgresql:
+    image: postgres
+    container_name: postgresql-container
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=schoolsystem
+
+volumes:
+  mongodb-data:
+    driver: local 
+  pgdata:
