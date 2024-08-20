@@ -10,3 +10,4 @@
 /Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Domain/obj/Debug/net8.0/refint/SchoolSystem.Domain.dll
 /Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Domain/obj/Debug/net8.0/SchoolSystem.Domain.pdb
 /Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Domain/obj/Debug/net8.0/ref/SchoolSystem.Domain.dll
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Domain/obj/Debug/net8.0/SchoolSystem.Domain.sourcelink.json

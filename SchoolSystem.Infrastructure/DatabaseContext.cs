@@ -12,6 +12,7 @@ public class DatabaseContext : DbContext
     }
 
     public DbSet<Student> Student { get; set; }
+    public DbSet<Professor> Professor { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

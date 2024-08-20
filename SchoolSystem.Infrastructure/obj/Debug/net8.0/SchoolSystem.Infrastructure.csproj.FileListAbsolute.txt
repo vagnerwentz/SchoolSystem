@@ -13,3 +13,4 @@
 /Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Infrastructure/obj/Debug/net8.0/refint/SchoolSystem.Infrastructure.dll
 /Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Infrastructure/obj/Debug/net8.0/SchoolSystem.Infrastructure.pdb
 /Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Infrastructure/obj/Debug/net8.0/ref/SchoolSystem.Infrastructure.dll
+/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Infrastructure/obj/Debug/net8.0/SchoolSystem.Infrastructure.sourcelink.json
