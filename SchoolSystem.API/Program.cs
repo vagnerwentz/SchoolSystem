@@ -1,7 +1,15 @@
 using Microsoft.EntityFrameworkCore;
+using SchoolSystem.API.Endpoints.Students;
+using SchoolSystem.Domain.Interfaces.Repositories;
 using SchoolSystem.Infrastructure;
+using SchoolSystem.Infrastructure.Repositories;
+using SchoolSystem.Service.Commands.Students.CreateStudent;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddMediatR(
+    cfg => cfg
+        .RegisterServicesFromAssembly(typeof(CreateStudentCommand).Assembly));
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -9,6 +17,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DatabaseContext>(
     options => options.UseNpgsql(builder.Configuration.GetConnectionString("SchoolSystemPostgreSQL")));
+
+builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+
+builder.Services.AddTransient<StudentsService>();
 
 var app = builder.Build();
 
@@ -21,29 +33,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-    {
-        var forecast = Enumerable.Range(1, 5).Select(index =>
-                new WeatherForecast
-                (
-                    DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                    Random.Shared.Next(-20, 55),
-                    summaries[Random.Shared.Next(summaries.Length)]
-                ))
-            .ToArray();
-        return forecast;
-    })
-    .WithName("GetWeatherForecast")
-    .WithOpenApi();
+app.RegisterStudentEndpoints();
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}

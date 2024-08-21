@@ -34,7 +34,6 @@ namespace SchoolSystem.Infrastructure.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("Photo")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -55,7 +54,6 @@ namespace SchoolSystem.Infrastructure.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("Photo")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");

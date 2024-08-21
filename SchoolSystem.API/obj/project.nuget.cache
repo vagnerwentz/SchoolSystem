@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Mf1Zj7cDg7w4DPkXiSeZSNjCMFHCUPI5Cg3K+cbHV8gCPjPZK/gYGks699DuhZY5SXUVr4f860CMoLrKARnOww==",
+  "dgSpecHash": "Y15vnVsAZf3gI1Y/6yR93clfyD7Odex8jV0IiBtDkgQ22EP50ACd+uQG2iqyOpKpSMk5VEzV9ubUjbXOF7IGxQ==",
   "success": true,
   "projectFilePath": "/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.API/SchoolSystem.API.csproj",
   "expectedPackageFiles": [
     "/Users/vagnerwentz/.nuget/packages/entityframework/6.5.1/entityframework.6.5.1.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/mediatr/12.4.0/mediatr.12.4.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/microsoft.aspnetcore.openapi/8.0.0/microsoft.aspnetcore.openapi.8.0.0.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/microsoft.codeanalysis.analyzers/3.3.3/microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",

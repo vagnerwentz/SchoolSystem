@@ -28,6 +28,9 @@
             "projectReferences": {
               "/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Infrastructure/SchoolSystem.Infrastructure.csproj": {
                 "projectPath": "/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Infrastructure/SchoolSystem.Infrastructure.csproj"
+              },
+              "/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Service/SchoolSystem.Service.csproj": {
+                "projectPath": "/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Service/SchoolSystem.Service.csproj"
               }
             }
           }
@@ -45,6 +48,10 @@
             "EntityFramework": {
               "target": "Package",
               "version": "[6.5.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.0, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
@@ -202,6 +209,69 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[8.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Service/SchoolSystem.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Service/SchoolSystem.Service.csproj",
+        "projectName": "SchoolSystem.Service",
+        "projectPath": "/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Service/SchoolSystem.Service.csproj",
+        "packagesPath": "/Users/vagnerwentz/.nuget/packages/",
+        "outputPath": "/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Service/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/vagnerwentz/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Domain/SchoolSystem.Domain.csproj": {
+                "projectPath": "/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Domain/SchoolSystem.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.0, )"
             }
           },
           "imports": [
