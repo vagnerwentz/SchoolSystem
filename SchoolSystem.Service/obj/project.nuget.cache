@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "m3C2c/AM9KJDyTU7qE4z+U+yo3iWcDw55sgFn63KYzRv1TqBvthHbv7wmhUNSyK4eCY2E2DbKUcqXZJixNW8gQ==",
+  "success": true,
+  "projectFilePath": "/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Service/SchoolSystem.Service.csproj",
+  "expectedPackageFiles": [
+    "/Users/vagnerwentz/.nuget/packages/mediatr/12.4.0/mediatr.12.4.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/mongodb.bson/2.28.0/mongodb.bson.2.28.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
