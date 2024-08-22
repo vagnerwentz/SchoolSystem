@@ -5,19 +5,12 @@ namespace SchoolSystem.Domain.Models;
 
 public class Subject
 {
-    [BsonId]
-    [BsonRepresentation(BsonType.ObjectId)]
-    public string Id { get; set; }
+    public int Id { get; private set; }
+    
+    public string Name { get; private set; } = null!;
 
-    [BsonElement("Name")]
-    public string Name { get; set; } = null!;
+    public string Code { get; private set; } = null!;
 
-    [BsonElement("Professor")]
-    public Professor Professors { get; set; } = null!;
-
-    [BsonElement("Students")]
-    public List<Student> Students { get; set; } = [];
-
-    [BsonElement("Attendance")]
-    public List<Attendance> Attendances { get; set; } = [];
+    public int ProfessorId { get; private set; }
+    public Professor Professor { get; private set; } = null!;
 }

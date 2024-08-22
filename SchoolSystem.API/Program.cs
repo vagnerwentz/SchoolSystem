@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using SchoolSystem.API.Endpoints.Professors;
 using SchoolSystem.API.Endpoints.Students;
 using SchoolSystem.Domain.Interfaces.Repositories;
 using SchoolSystem.Infrastructure;
@@ -19,8 +20,10 @@ builder.Services.AddDbContext<DatabaseContext>(
     options => options.UseNpgsql(builder.Configuration.GetConnectionString("SchoolSystemPostgreSQL")));
 
 builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+builder.Services.AddScoped<IProfessorRepository, ProfessorRepository>();
 
 builder.Services.AddTransient<StudentsService>();
+builder.Services.AddTransient<ProfessorsService>();
 
 var app = builder.Build();
 
@@ -34,5 +37,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.RegisterStudentEndpoints();
+app.RegisterProfessorEndpoints();
 
 app.Run();

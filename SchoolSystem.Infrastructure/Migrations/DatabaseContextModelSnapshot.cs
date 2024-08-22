@@ -60,6 +60,43 @@ namespace SchoolSystem.Infrastructure.Migrations
 
                     b.ToTable("Student");
                 });
+
+            modelBuilder.Entity("SchoolSystem.Domain.Models.Subject", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("ProfessorId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProfessorId");
+
+                    b.ToTable("Subject");
+                });
+
+            modelBuilder.Entity("SchoolSystem.Domain.Models.Subject", b =>
+                {
+                    b.HasOne("SchoolSystem.Domain.Models.Professor", "Professor")
+                        .WithMany()
+                        .HasForeignKey("ProfessorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Professor");
+                });
 #pragma warning restore 612, 618
         }
     }
