@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ni3ZR6/LQohgEkwiYHj7N588KTsyeSPqaY3O/LXEdThuk9D08Xzz6sGzdLDwKNEpEU1+btomuiMmQtjDmsKO+g==",
+  "dgSpecHash": "fm/rE1Sw2/nrn+wsEIV8qWwhQY1kg8svl3x4gXLDpK/sHiLPSogmwi/t3OWTilBKGeYI50VXQfqpw0P0rVdU5g==",
   "success": true,
   "projectFilePath": "/Users/vagnerwentz/RiderProjects/SchoolSystem/SchoolSystem.Infrastructure/SchoolSystem.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "/Users/vagnerwentz/.nuget/packages/awssdk.core/3.7.100.14/awssdk.core.3.7.100.14.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/awssdk.securitytoken/3.7.100.14/awssdk.securitytoken.3.7.100.14.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/dnsclient/1.6.1/dnsclient.1.6.1.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/microsoft.entityframeworkcore/8.0.8/microsoft.entityframeworkcore.8.0.8.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/microsoft.entityframeworkcore.abstractions/8.0.8/microsoft.entityframeworkcore.abstractions.8.0.8.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/microsoft.entityframeworkcore.analyzers/8.0.8/microsoft.entityframeworkcore.analyzers.8.0.8.nupkg.sha512",
@@ -17,11 +20,22 @@
     "/Users/vagnerwentz/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/microsoft.extensions.options/8.0.0/microsoft.extensions.options.8.0.0.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/microsoft.netcore.platforms/5.0.0/microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/microsoft.win32.registry/5.0.0/microsoft.win32.registry.5.0.0.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/mongodb.bson/2.28.0/mongodb.bson.2.28.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/mongodb.driver/2.28.0/mongodb.driver.2.28.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/mongodb.driver.core/2.28.0/mongodb.driver.core.2.28.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/mongodb.libmongocrypt/1.11.0/mongodb.libmongocrypt.1.11.0.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/npgsql/8.0.3/npgsql.8.0.3.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/npgsql.entityframeworkcore.postgresql/8.0.4/npgsql.entityframeworkcore.postgresql.8.0.4.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/sharpcompress/0.30.1/sharpcompress.0.30.1.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/snappier/1.0.0/snappier.1.0.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
     "/Users/vagnerwentz/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512",
-    "/Users/vagnerwentz/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+    "/Users/vagnerwentz/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/system.security.accesscontrol/5.0.0/system.security.accesscontrol.5.0.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/system.security.principal.windows/5.0.0/system.security.principal.windows.5.0.0.nupkg.sha512",
+    "/Users/vagnerwentz/.nuget/packages/zstdsharp.port/0.7.3/zstdsharp.port.0.7.3.nupkg.sha512"
   ],
   "logs": []
 }

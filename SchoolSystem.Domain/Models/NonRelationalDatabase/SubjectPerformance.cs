@@ -5,20 +5,14 @@ namespace SchoolSystem.Domain.Models.NonRelationalDatabase;
 public class SubjectPerformance
 {
     [BsonElement("subjectId")]
-    public string SubjectId { get; set; } = null!;  // Referência ao ID da matéria no PostgreSQL
+    public string SubjectId { get; set; } = null!;
 
     [BsonElement("grades")]
-    public List<decimal> Grades { get; set; } = new List<decimal>();  // Array de notas
-
-    [BsonElement("finalGrade")]
-    public decimal? FinalGrade { get; set; }  // Nota final calculada
-
-    [BsonElement("absences")]
-    public int Absences { get; set; }  // Número de faltas
-
+    public List<decimal> Grades { get; set; } = new List<decimal>();
+    
     [BsonElement("comments")]
-    public string? Comments { get; set; }  // Comentários do professor
+    public string? Comments { get; set; }
 
     [BsonElement("performanceGraph")]
-    public string? PerformanceGraph { get; set; }  // URL ou dados do gráfico de desempenho
+    public string? PerformanceGraph { get; set; }
 }

@@ -1,5 +1,8 @@
+using System.Configuration;
 using Microsoft.EntityFrameworkCore;
+using MongoDB.Driver;
 using SchoolSystem.API.Endpoints.Professors;
+using SchoolSystem.API.Endpoints.StudentPerformances;
 using SchoolSystem.API.Endpoints.Students;
 using SchoolSystem.Domain.Interfaces.Repositories;
 using SchoolSystem.Infrastructure;
@@ -18,12 +21,26 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DatabaseContext>(
     options => options.UseNpgsql(builder.Configuration.GetConnectionString("SchoolSystemPostgreSQL")));
+builder.Services.AddSingleton<IMongoClient, MongoClient>(sp =>
+{
+    var connectionString = builder.Configuration.GetConnectionString("SchoolSystemMongoDB");
+    return new MongoClient(connectionString);
+});
+
+builder.Services.AddSingleton(sp =>
+{
+    var mongoClient = sp.GetRequiredService<IMongoClient>();
+    return mongoClient.GetDatabase("SchoolSystem");
+});
 
 builder.Services.AddScoped<IStudentRepository, StudentRepository>();
 builder.Services.AddScoped<IProfessorRepository, ProfessorRepository>();
+builder.Services.AddScoped<IStudentPerformanceRepository, StudentPerformanceRepository>();
+builder.Services.AddScoped<IEnrollmentRepository, EnrollmentRepository>();
 
 builder.Services.AddTransient<StudentsService>();
 builder.Services.AddTransient<ProfessorsService>();
+builder.Services.AddTransient<StudentPerformancesService>();
 
 var app = builder.Build();
 
@@ -38,5 +55,6 @@ app.UseHttpsRedirection();
 
 app.RegisterStudentEndpoints();
 app.RegisterProfessorEndpoints();
+app.RegisterStudentPerformancesEndpoints();
 
 app.Run();

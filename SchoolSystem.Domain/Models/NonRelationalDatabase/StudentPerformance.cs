@@ -10,7 +10,7 @@ public class StudentPerformance
     public string Id { get; set; } = null!;
 
     [BsonElement("studentId")]
-    public string StudentId { get; set; } = null!;  // Referência ao ID do aluno no PostgreSQL
+    public string StudentId { get; set; } = null!;
 
     [BsonElement("subjectPerformances")]
     public List<SubjectPerformance> SubjectPerformances { get; set; } = new List<SubjectPerformance>();
