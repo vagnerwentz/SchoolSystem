@@ -4,5 +4,6 @@ namespace SchoolSystem.Domain.Interfaces.Repositories;
 
 public interface IStudentRepository
 {
-    Task Create(Student student, CancellationToken cancellationToken);
+    Task AddAsync(Student student, CancellationToken cancellationToken);
+    Task<List<Student>> GetAllStudentsAsync(CancellationToken cancellationToken);
 }

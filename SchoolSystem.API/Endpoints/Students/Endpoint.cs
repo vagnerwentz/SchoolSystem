@@ -13,5 +13,9 @@ public static class Endpoint
             StudentsService service,
             CreateStudentRequest request
         ) => await service.CreateStudentAsync(request));
+        
+        students.MapGet("list", async (
+            StudentsService service
+        ) => await service.GetAllStudentsAsync());
     }
 }

@@ -42,6 +42,16 @@ builder.Services.AddTransient<StudentsService>();
 builder.Services.AddTransient<ProfessorsService>();
 builder.Services.AddTransient<StudentPerformancesService>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAnyOrigin", builder =>
+    {
+        builder.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -52,6 +62,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("AllowAnyOrigin");
 
 app.RegisterStudentEndpoints();
 app.RegisterProfessorEndpoints();
