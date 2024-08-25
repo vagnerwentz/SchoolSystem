@@ -1,9 +1,11 @@
 using System.Configuration;
 using Microsoft.EntityFrameworkCore;
 using MongoDB.Driver;
+using SchoolSystem.API.Endpoints.Enrollments;
 using SchoolSystem.API.Endpoints.Professors;
 using SchoolSystem.API.Endpoints.StudentPerformances;
 using SchoolSystem.API.Endpoints.Students;
+using SchoolSystem.API.Endpoints.Subjects;
 using SchoolSystem.Domain.Interfaces.Repositories;
 using SchoolSystem.Infrastructure;
 using SchoolSystem.Infrastructure.Repositories;
@@ -34,12 +36,15 @@ builder.Services.AddSingleton(sp =>
 });
 
 builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+builder.Services.AddScoped<ISubjectsRepository, SubjectsRepository>();
 builder.Services.AddScoped<IProfessorRepository, ProfessorRepository>();
-builder.Services.AddScoped<IStudentPerformanceRepository, StudentPerformanceRepository>();
 builder.Services.AddScoped<IEnrollmentRepository, EnrollmentRepository>();
+builder.Services.AddScoped<IStudentPerformanceRepository, StudentPerformanceRepository>();
 
 builder.Services.AddTransient<StudentsService>();
+builder.Services.AddTransient<SubjectsService>();
 builder.Services.AddTransient<ProfessorsService>();
+builder.Services.AddTransient<EnrollmentsService>();
 builder.Services.AddTransient<StudentPerformancesService>();
 
 builder.Services.AddCors(options =>
@@ -66,7 +71,9 @@ app.UseHttpsRedirection();
 app.UseCors("AllowAnyOrigin");
 
 app.RegisterStudentEndpoints();
+app.RegisterSubjectEndpoints();
 app.RegisterProfessorEndpoints();
+app.RegisterEnrollmentEndpoints();
 app.RegisterStudentPerformancesEndpoints();
 
 app.Run();
