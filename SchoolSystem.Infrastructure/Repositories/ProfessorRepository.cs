@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using SchoolSystem.Domain.Interfaces.Repositories;
 using SchoolSystem.Domain.Models;
 
@@ -9,5 +10,10 @@ public class ProfessorRepository(DatabaseContext databaseContext) : IProfessorRe
     {
         await databaseContext.Professor.AddAsync(professor, cancellationToken);
         await databaseContext.SaveChangesAsync(cancellationToken);
+    }
+
+    public async Task<List<Professor>> GetAllProfessorsAsync(CancellationToken cancellationToken)
+    {
+        return await databaseContext.Professor.ToListAsync(cancellationToken);
     }
 }

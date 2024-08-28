@@ -1,6 +1,7 @@
 using MediatR;
 using SchoolSystem.API.Endpoints.Professors.Requests;
 using SchoolSystem.Service.Commands.Professors.CreateProfessor;
+using SchoolSystem.Service.Query.Professors;
 
 namespace SchoolSystem.API.Endpoints.Professors;
 
@@ -14,6 +15,15 @@ public class ProfessorsService(ISender mediator)
         
         var result = await mediator.Send(command);
         
+        return TypedResults.Ok(result);
+    }
+
+    public async Task<IResult> GetAllProfessorsAsync()
+    {
+        var query = new GetAllProfessorsQuery();
+
+        var result = await mediator.Send(query);
+
         return TypedResults.Ok(result);
     }
 }

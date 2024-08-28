@@ -12,5 +12,7 @@ public static class Endpoint
             ProfessorsService service,
             CreateProfessorRequest request
         ) => await service.CreateProfessorAsync(request));
+
+        professors.MapGet("list", async (ProfessorsService service) => await service.GetAllProfessorsAsync());
     }
 }
