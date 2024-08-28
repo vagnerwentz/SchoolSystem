@@ -14,5 +14,10 @@ public static class Endpoint
             StudentPerformancesService service,
             AddStudentPerformanceRequest request
         ) => await service.AddStudentPerformanceAsync(request));
+
+        studentPerformance.MapGet("/{id:int}", async (
+            int id,
+            StudentPerformancesService service
+        ) => await service.GetStudentPerformanceById(id));
     }
 }

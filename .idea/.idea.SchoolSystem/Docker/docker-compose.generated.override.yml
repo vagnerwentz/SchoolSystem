@@ -1,7 +1,7 @@
 # This is a generated file. Not intended for manual editing.
 version: "3.4"
 services:
-  schoolsystem.api:
+  schoolsystem-api:
     build:
       context: "/Users/vagnerwentz/RiderProjects/SchoolSystem"
       dockerfile: "SchoolSystem.API/Dockerfile"
@@ -13,7 +13,7 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: "Development"
       DOTNET_USE_POLLING_FILE_WATCHER: "true"
-    image: "schoolsystem.api:dev"
+    image: "schoolsystem-api:dev"
     ports: []
     volumes:
     - "/Users/vagnerwentz/.nuget/packages:/home/app/.nuget/packages"

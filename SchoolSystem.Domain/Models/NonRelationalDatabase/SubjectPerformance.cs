@@ -8,11 +8,19 @@ public class SubjectPerformance
     public string SubjectId { get; set; } = null!;
 
     [BsonElement("grades")]
-    public List<decimal> Grades { get; set; } = new List<decimal>();
+    public List<Grades> Grades { get; set; } = new List<Grades>();
     
     [BsonElement("comments")]
     public string? Comments { get; set; }
 
     [BsonElement("performanceGraph")]
     public string? PerformanceGraph { get; set; }
+}
+
+public class Grades
+{
+    public decimal Grade { get; set; }
+    public string Description { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public DateTime ChangedAt { get; set; }
 }

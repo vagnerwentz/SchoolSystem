@@ -20,4 +20,11 @@ public class EnrollmentRepository(DatabaseContext databaseContext) : IEnrollment
         await databaseContext.Enrollment.AddAsync(enrollment, cancellationToken);
         await databaseContext.SaveChangesAsync(cancellationToken);
     }
+
+    public async Task<List<Enrollment>> GetEnrollmentStudentAsync(int studentId)
+    {
+        return await databaseContext.Enrollment.Where(e => e.StudentId == studentId)
+            .Include(e => e.Subject)
+            .ToListAsync();
+    }
 }

@@ -1,13 +1,22 @@
 ﻿version: '3.4'
 
 services:
-  schoolsystem.api:
-    image: schoolsystem.api
+  schoolsystem-api:
+    image: schoolsystem-api
     build:
       context: .
       dockerfile: SchoolSystem.API/Dockerfile
     ports:
       - "8080:8080"
+    depends_on:
+      - postgresql
+      - mongo
+    environment:
+      - SchoolSystemPostgreSQL=Host=postgresql;Port=5432;Username=postgres;Password=postgres;Database=schoolsystem;Include Error Detail=true
+      - SchoolSystemMongoDB=mongodb://mongo:27017/
+    networks:
+      - app-network
+
   mongo:
     image: mongo:latest
     container_name: mongodb-container
@@ -15,6 +24,9 @@ services:
       - "27017:27017"
     volumes:
       - mongodb-data:/data/db
+    networks:
+      - app-network
+
   postgresql:
     image: postgres
     container_name: postgresql-container
@@ -26,8 +38,14 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=schoolsystem
-
+    networks:
+      - app-network
+    
 volumes:
   mongodb-data:
     driver: local 
   pgdata:
+    
+networks:
+  app-network:
+    driver: bridge

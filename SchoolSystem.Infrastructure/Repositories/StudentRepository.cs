@@ -15,6 +15,7 @@ public class StudentRepository(DatabaseContext databaseContext) : IStudentReposi
 
     public async Task<List<Student>> GetAllStudentsAsync(CancellationToken cancellationToken)
     {
+        Console.WriteLine("TESTANDO O LOG CHEGANDO NO PROJETO DE INFRA");
         return await databaseContext.Student.ToListAsync(cancellationToken);
     }
 }
