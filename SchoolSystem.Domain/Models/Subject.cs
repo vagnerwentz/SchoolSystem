@@ -13,4 +13,6 @@ public class Subject
 
     public int ProfessorId { get; private set; }
     public Professor Professor { get; private set; } = null!;
+    
+    public ICollection<Enrollment> Enrollments { get; private set; } = new List<Enrollment>();
 }

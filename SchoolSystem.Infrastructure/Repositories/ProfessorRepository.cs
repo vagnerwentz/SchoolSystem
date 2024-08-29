@@ -16,4 +16,14 @@ public class ProfessorRepository(DatabaseContext databaseContext) : IProfessorRe
     {
         return await databaseContext.Professor.ToListAsync(cancellationToken);
     }
+
+    public async Task<Professor> GetProfessorProfileAsync(int id)
+    {
+        return await databaseContext.Professor
+            .Include(p => p.Subjects)
+            .ThenInclude(s => s.Enrollments)
+            .ThenInclude(e => e.Student)
+            .FirstOrDefaultAsync(p => p.Id == id);
+        return await databaseContext.Professor.FindAsync(id);
+    }
 }

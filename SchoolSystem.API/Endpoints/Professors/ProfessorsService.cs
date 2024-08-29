@@ -26,4 +26,13 @@ public class ProfessorsService(ISender mediator)
 
         return TypedResults.Ok(result);
     }
+
+    public async Task<IResult> GetProfessorProfile(int id)
+    {
+        var query = new ProfessorProfileQuery(id);
+
+        var result = await mediator.Send(query);
+
+        return TypedResults.Ok(result);
+    }
 }

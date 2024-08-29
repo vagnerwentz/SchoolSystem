@@ -27,4 +27,12 @@ public class EnrollmentRepository(DatabaseContext databaseContext) : IEnrollment
             .Include(e => e.Subject)
             .ToListAsync();
     }
+
+    public async Task<List<Enrollment>> GetEnrollmentsBySubjectIdsAsync(List<int> subjectIds)
+    {
+        return await databaseContext.Enrollment
+            .Where(e => subjectIds.Contains(e.SubjectId))
+            .Include(e => e.Student)
+            .ToListAsync();
+    }
 }
