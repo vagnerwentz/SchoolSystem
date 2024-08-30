@@ -11,6 +11,11 @@ public static class Endpoint
         subjects.MapGet("list", async (
             SubjectsService service
         ) => await service.GetAllSubjectsAsync());
+
+        subjects.MapPost("create", async (
+            SubjectsService service,
+            AddSubjectRequest request
+        ) => await service.AddSubjectAsync(request));
     }
 
 }

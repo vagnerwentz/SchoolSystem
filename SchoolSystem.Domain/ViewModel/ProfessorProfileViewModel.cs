@@ -20,27 +20,3 @@ public class StudentViewModel
     public int StudentId { get; set; }
     public string StudentName { get; set; }
 }
-
-// const mockData = {
-//     professorName: 'Professor X',
-//     subjects: [
-//     {
-//         id: 1,
-//         name: 'Matemática',
-//         averageGrade: 8.5,
-//         students: [
-//         { id: 101, name: 'Estudante A' },
-//         { id: 102, name: 'Estudante B' },
-//         ],
-//     },
-//     {
-//         id: 2,
-//         name: 'Física',
-//         averageGrade: 7.3,
-//         students: [
-//         { id: 103, name: 'Estudante C' },
-//         { id: 104, name: 'Estudante D' },
-//         ],
-//     },
-//     ],
-// };

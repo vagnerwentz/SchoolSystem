@@ -7,6 +7,12 @@ namespace SchoolSystem.Infrastructure.Repositories;
 
 public class SubjectsRepository(DatabaseContext databaseContext) : ISubjectsRepository
 {
+    public async Task AddSubjectAsync(Subject subject)
+    {
+        await databaseContext.AddAsync(subject);
+        await databaseContext.SaveChangesAsync();
+    }
+
     public async Task<List<Subject>> GetAllSubjectsAsync(CancellationToken cancellationToken)
     {
         return await databaseContext.Subject.ToListAsync(cancellationToken);

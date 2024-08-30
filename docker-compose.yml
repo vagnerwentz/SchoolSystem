@@ -41,6 +41,17 @@ services:
     networks:
       - app-network
     
+  school-system-frontend:
+    build:
+      context: /Users/vagnerwentz/Documents/Projects/school-system
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+    depends_on:
+      - schoolsystem-api
+    
 volumes:
   mongodb-data:
     driver: local 

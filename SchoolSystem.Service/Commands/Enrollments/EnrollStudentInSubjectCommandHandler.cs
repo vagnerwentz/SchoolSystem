@@ -38,6 +38,7 @@ public class EnrollStudentInSubjectCommandHandler(
                     }
                 ]
             };
+            await studentPerformanceRepository.AddAsync(studentPerformance);
         } else
         {
             var existingSubjectPerformance = studentPerformance.SubjectPerformances
@@ -55,10 +56,8 @@ public class EnrollStudentInSubjectCommandHandler(
             }
         }
         
-        var addSubjectsPerformanceTask = studentPerformanceRepository.AddAsync(studentPerformance);
-        var addEnrollmentStudentInSubjectTask = enrollmentRepository.AddEnrollmentStudentInSubjectAsync(enrollment, cancellationToken); 
+        await enrollmentRepository.AddEnrollmentStudentInSubjectAsync(enrollment, cancellationToken); 
         
-        await Task.WhenAll(addSubjectsPerformanceTask, addEnrollmentStudentInSubjectTask);
         return OperationResult<EnrollStudentInSubjectCommand>.SuccessResult(null, HttpStatusCode.Created);
     }
 }
